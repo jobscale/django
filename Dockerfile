@@ -1,8 +1,7 @@
-FROM jobscale/debian:buster
+FROM python:3.7-buster
 SHELL ["bash", "-c"]
 WORKDIR /root
-RUN apt-get update && apt-get install -y python3-pip
 COPY . django
-RUN pip3 install -e django
+RUN pip install -e django
 EXPOSE 80
-CMD ["python3", "django/tests/web/manage.py", "runserver", "0.0.0.0:80"]
+CMD ["python", "django/tests/web/manage.py", "runserver", "0.0.0.0:80"]
