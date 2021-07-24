@@ -1,4 +1,4 @@
-FROM python:3.7-buster
+FROM python:buster
 SHELL ["bash", "-c"]
 WORKDIR /root
 COPY . django
