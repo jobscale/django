@@ -1,7 +1,7 @@
 #### run with container
 
 ```bash
-git clone --depth=1 git@github.com:jobscale/django.git
+git clone --depth=1 https://github.com/jobscale/django.git
 cd django
 main() {
   docker build . -t local/django:0.0.1
